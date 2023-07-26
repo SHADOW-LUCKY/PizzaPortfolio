@@ -1,0 +1,31 @@
+[{
+  "name": "Mozzarella",
+  "description": "Es uno de los quesos más comunes y populares para la base de una pizza. Tiene un sabor suave y se derrite fácilmente, lo que lo hace perfecto para pizzas.",
+  "available": true,
+  "imagen":"https://as2.ftcdn.net/v2/jpg/02/65/00/87/1000_F_265008780_tBwZLceJIt2RVEwTwbRkErA7p60QviIf.jpg"
+},{
+  "name": "Queso cheddar",
+  "description": "Agrega un sabor más audaz y un poco más de intensidad en comparación con la mozzarella. Puedes usar cheddar en combinación con otros quesos para un sabor más complejo.",
+  "available": true,
+  "imagen":"https://img.freepik.com/vector-premium/queso-estilo-pixel-art_569042-3.jpg"
+},{
+  "name": "Queso de cabra",
+  "description": "Es suave y cremoso, con un sabor distintivo. Agregar queso de cabra a la pizza le da una sensación gourmet.",
+  "available": true,
+  "imagen":"https://quesosdonapolonio.es/pub/media/catalog/product/cache/c6d687315120bb435d09ef6f19cb55f3/q/u/queso-de-cabra-tierno-don-apolonio.jpg"
+},{
+  "name": "Queso parmesano",
+  "description": "Tiene un sabor fuerte y salado que puede agregar profundidad y umami a la pizza. Es común espolvorear queso parmesano rallado sobre la pizza después de cocinarla.",
+  "available": true,
+  "imagen":"https://www.amando.it/imagesdyn/articoli/11/54/4333.jpg"
+},{
+  "name": "Queso provolone",
+  "description": "Tiene un sabor ahumado y picante, que lo convierte en una opción sabrosa para la base de la pizza.",
+  "available": true,
+  "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT85p_EILpnlYYm01YjiMH1gnEXhqWGEkDC5Q&usqp=CAU"
+},{
+  "name": "Queso suizo",
+  "description": "Si te gusta un sabor más suave y dulce, el queso suizo puede ser una buena elección para la base de la pizza.",
+  "available": true,
+  "imagen":"https://static.vecteezy.com/system/resources/previews/015/871/854/non_2x/cheese-protein-icon-isometric-style-vector.jpg"
+}]

@@ -1,0 +1,17 @@
+[{
+  "name": "Queso",
+  "description": "Agregar queso al borde de la pizza es una opción clásica y deliciosa. Puedes usar mozzarella, cheddar, queso crema o cualquier otro queso que te guste para obtener un borde extra sabroso.",
+  "available": true
+},{
+  "name": "Tocino y queso cheddar",
+  "description": "Combina tocino crujiente y queso cheddar rallado para un borde relleno con un toque de ahumado y sabor audaz.",
+  "available": true
+},{
+  "name": "Espinacas y queso feta",
+  "description": "Mezclar espinacas frescas picadas con queso feta desmenuzado crea un borde relleno con un toque de frescura y un sabor salado.",
+  "available": true
+},{
+  "name": "Chorizo y jalapeños",
+  "description": "Para un borde relleno picante, combina chorizo picado y jalapeños en rodajas. Agregar un poco de queso cheddar también puede realzar los sabores.",
+  "available": true
+}]

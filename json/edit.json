@@ -1,0 +1,66 @@
+[{
+    "name": "Champiñones",
+    "type": "Vegetables",
+    "available": true,
+    "imagen":"https://st.depositphotos.com/50990794/58786/v/450/depositphotos_587866170-stock-illustration-cute-pixel-mushrooms-vector-illustration.jpg"
+  },{
+    "name": "Pimientos",
+    "type": "Vegetables",
+    "available": true,
+    "imagen":"https://static.vecteezy.com/system/resources/previews/019/797/312/original/an-8-bit-retro-styled-pixel-art-illustration-of-green-pepper-free-png.png"
+  },{
+    "name": "Cebolla",
+    "type": "Vegetables",
+    "available": true,
+    "imagen":"https://static.wikia.nocookie.net/minecraft-esp/images/d/d8/Cebolla_Farmer%27s_Delight.png/revision/latest/thumbnail/width/360/height/360?cb=20220806112712&path-prefix=es"
+  },{
+    "name": "Tomate",
+    "type": "Vegetables",
+    "available": true,
+    "imagen":"https://static.wikia.nocookie.net/minecraft-esp/images/2/29/Tomate_Farmer%27s_Delight.png/revision/latest/thumbnail/width/360/height/360?cb=20220806105333&path-prefix=es"
+  },{
+    "name": "Berenjena",
+    "type": "Vegetables",
+    "available": true,
+    "imagen":"https://png.pngtree.com/png-vector/20230506/ourmid/pngtree-eggplant-pixel-art-vector-png-image_7085232.png"
+  },{
+    "name": "Pepperoni",
+    "type": "Meat",
+    "available": true,
+    "imagen":"https://cdnb.artstation.com/p/assets/images/images/018/366/533/large/noele-grosie-pixelfood-b-007.jpg?1559107951"
+  },{
+    "name": "Jamón",
+    "type": "Meat",
+    "available": true,
+    "imagen":"https://static.wikia.nocookie.net/farmersdelight/images/a/a8/Ham.png/revision/latest/thumbnail/width/360/height/360?cb=20221013064445"
+  },{
+    "name": "Salchicha",
+    "type": "Meat",
+    "available": true,
+    "imagen":"https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/753ce060eea2ca1.png"
+  },{
+    "name": "Pollo",
+    "type": "Meat",
+    "available": true,
+    "imagen":"https://mineblocks.com/1/wiki/images/archive/c/c1/20220102024045%21Cooked_Chicken.png"
+  },{
+    "name": "Tocino",
+    "type": "Meat",
+    "available": true,
+    "imagen":"https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/139e8851f7a814d.png"
+  },{
+    "name": "Albahaca",
+    "type": "Herbs",
+    "available": true,
+    "imagen":"https://cdn-icons-png.flaticon.com/256/4683/4683770.png"
+  },{
+    "name": "Orégano",
+    "type": "Herbs",
+    "available": true,
+    "imagen":"https://www.venusti.eu/spa_pl_Mary-Rose-Te-de-Cannabis-de-Yunnan-50g-10008_3.png"
+  },{
+    "name": "Perejil",
+    "type": "Herbs",
+    "available": true,
+    "imagen":"https://cdn-icons-png.flaticon.com/512/1135/1135507.png"
+  }]
