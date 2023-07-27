@@ -13,142 +13,153 @@
 <body>
     <div class="container-fluid ">
         <div class="row allpage">
-            <!-- sesion y menus -->
+<!-- sesion y menus -->
 
-            <div class="col-2 bgout text-light">
-                <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#Logout">
-                    <i class="bi bi-box-arrow-left"></i>
-                  </button>
-                                  
-                <div class="d-flex justify-content-center flex-column">
-                    <div class="d-flex justify-content-center mt-3 ">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="..." width="150px" class="rounded-circle">
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <h2>admin 1</h2>
-                    </div>
+<div class="col-2 bgout text-light">
+    <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#Logout">
+        <i class="bi bi-box-arrow-left"></i>
+      </button>
+                      
+    <div class="d-flex justify-content-center flex-column">
+        <div class="d-flex justify-content-center mt-3 ">
+            <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="..." width="150px" class="rounded-circle">
+        </div>
+        <div class="d-flex justify-content-center">
+            <h2>admin 1</h2>
+        </div>
+    </div>
+    <div class="menus">
+        <h2 class="mt-5 text-center">Ingredientes</h2>
+        <ul>
+            <li> 
+                <div class="d-flex flex-row mt-2"><a href="#" class="link-light "><h4>Toppings</h4></a></div>
+            </li>
+            <li>
+                <div class="d-flex flex-row mt-2"><a href="#" class="link-light "><h4>Queso base</h4></a></div>
+            </li>
+            <li>
+                <div class="d-flex flex-row mt-2"><a href="#" class="link-light "><h4>Salsa base</h4></a></div>
+            </li>
+            <li>
+                <div class="d-flex flex-row mt-2"><a href="#" class="link-light "><h4>Bordes rellenos</h4></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- ingredientes -->
+<div class="col-8 bg">
+    <div class="d-flex flex-row justify-content-between ">
+        <h1>Toppings</h1> 
+        <button type="button" class="btn btn-success btn-lg  mt-2" data-bs-toggle="modal" data-bs-target="#formmodal">
+            <i class="bi bi-plus-square"></i>
+          </button>
+    </div>
+    <div class="row p-2 auto">
+        <div class="col-lg-3 col-md-6 p-2">
+            <div class="card bgcard" >
+                <div class="card-header d-flex formradius flex-row justify-content-between">
+                    <h5 class="mt-2">Pimiento</h5><button style="font-size: x-large; background-color: rgba(255,255,255,0); border: none "><i class="bi bi-x-circle text-danger"></i></button> 
                 </div>
-                <div class="menus">
-                    <h2 class="mt-5 text-center">Ingredientes </h2>
-                    <ul>
-                        <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h4>toppings</h4></a></div>
-                        </li>
-                        <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h4>queso base</h4></a></div>
-                        </li>
-                        <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h4>salsa base</h4></a></div>
-                        </li>
-                        <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h4>bordes rellenos</h4></a></div>
-                        </li>
-                    </ul>
-                </div>
+            <img src="https://static.vecteezy.com/system/resources/previews/019/797/312/original/an-8-bit-retro-styled-pixel-art-illustration-of-green-pepper-free-png.png" class="card-img" alt="...">
+                <div class="row p-1">
+                    <div class="d-flex flex-row p-2 justify-content-center">
+                        <form class="d-flex">
+                            <!-- <h5 class="mt-2 p-2 titleava" style="color: rgb(11, 145, 40);">Available<i class="bi bi-check-circle-fill"></i></h5> --> 
+                         <h5 class="mt-2 p-2 titleava" style="color: rgb(167, 24, 24);">Not Available<i class="bi bi-x-circle-fill"></i></h5>  
+                        <button class="btn btn-warning mx-2 my-2">Change</button>
+                        </form>    
+                    </div>                                    
+                </div>                            
             </div>
-            <!-- ingredientes -->
-            <div class="col-8 bg">
-                <div class="d-flex flex-row justify-content-between ">
-                    <h1>Toppings</h1> 
-                    <button type="button" class="btn btn-success btn-lg  mt-2" data-bs-toggle="modal" data-bs-target="#formmodal">
-                        <i class="bi bi-plus-square"></i>
-                      </button>
-                </div>
-                <div class="row p-2 auto">
-                    <div class="col-lg-3 col-md-6 p-2">
-                        <div class="card bgcard" >
-                            <div class="card-header d-flex formradius flex-row justify-content-between">
-                                <h5 class="mt-2">Pimiento</h5><button style="font-size: x-large; background-color: rgba(255,255,255,0); border: none "><i class="bi bi-x-circle text-danger"></i></button> 
-                            </div>
-                        <img src="https://static.vecteezy.com/system/resources/previews/019/797/312/original/an-8-bit-retro-styled-pixel-art-illustration-of-green-pepper-free-png.png" class="card-img" alt="...">
-                            <div class="row p-1">
-                                <div class="d-flex flex-row p-2 justify-content-center">
-                                    <form class="d-flex">
-                                        <h5 class="mt-2 p-2 titleava" style="color: rgb(18, 221, 62);">Available<i class="bi bi-check-circle-fill"></i></h5> 
-                                    <!-- <h5 class="text-center mt-2 bg-light" style="color: rgb(167, 24, 24);">Not Available<i class="bi bi-x-circle-fill"></i></h5>  -->
-                                    <button class="btn btn-warning mx-2 my-2">Change</button>
-                                    </form>    
-                                </div>                                    
-                            </div>                            
-                        </div>
-                    </div>    
-                </div>
-            </div>
-            <!-- ordenes light -->
-            <div class="col-2 bgout text-light">
-                <h2 class="mt-3">Ordenes actuales</h2>
-                <div id="ordenes">
-                    <p>parece que no hay ordenes... :(</p>
-                </div>
-                <div>
-                    <div class="card " style="width: 18rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">Orden De ${nombre}</h5>
-                          <p class="card-text">Orden hecha en: ${CreatedAt}</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Forma:${forma}</li>
-                          <li class="list-group-item">Queso base:</li>    
-                          <li class="list-group-item">Salsa base:</li>
-                          <li class="list-group-item">Toppings:</li>
-                          <li class="list-group-item">Direccion:</li>
-                        </ul>
-                        <div class="card-body">
-                          <a href="#" class="card-link">Ir a las Ordenes</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            
-            <!-- Modales -->
-              <div class="modal fade" id="formmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Topping</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="toppings">
-                      <form>
-                        <label for="">Nombre</label>
-                        <input type="text" name="name" class="form-control mb-2">
-                        <label for="">Tipo de Topping</label>
-                        <select name="type" class="form-select mb-2">
-                            <option value="carne">carne</option>
-                            <option value="vegetales">vegetales</option>
-                            <option value="especias">especias</option>
-                            <option value="fruta">fruta</option>
-                            <option value="lacteos">lacteos</option>
-                            <option value="otro">otro</option>
-                        </select>
-                        <label for="">Link (Imagen)</label>
-                        <input type="text" name="img" class="form-control mb-2">
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary">Guardar</button>
-                    </form>
-                    </div>
-                  </div>
+        </div>    
+    </div>
+</div>
+<!-- ordenes light -->
+<div class="col-2 bgout text-light p-2">
+    <h2 class="mt-3">Ordenes actuales</h2>
+    <div id="ordenes" class="">
+        <!-- <p>parece que no hay ordenes... :(</p> -->
+        <div class="card " style="width: 18rem;">
+          <div class="card-body bgorder" style="border: none;">
+            <h5 class="card-title ">Orden De ${nombre}</h5>
+            <p class="card-text">Orden hecha en: ${CreatedAt}</p>
+          </div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Detalles
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Forma:</li>
+                    <li class="list-group-item">Queso base:</li>    
+                    <li class="list-group-item">Salsa base:</li>
+                    <li class="list-group-item">Toppings:</li>
+                  </ul>
                 </div>
               </div>
-              <div class="modal fade" id="Logout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header pizzabg" style="border: none;">
-                        <h1 class="modal-title fs-5 text-light p-1 " id="exampleModalLabel">Cerrar Sesión</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body bg-dark text-light">
-                        seguro que desea cerrar sesión?
-                    </div>
-                    <div class="modal-footer pizzabg" style="border: none;">
-                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Aun no</button>
-                      <button type="button" class="btn btn-danger">Si, Salir</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div> 
+          <div class="card-body bgorder">
+            <a href="#" class="card-link">Ir a las Ordenes</a>
+          </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Modales -->
+  <div class="modal fade" id="formmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Topping</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="toppings">
+          <form>
+            <label for="">Nombre</label>
+            <input type="text" name="name" class="form-control mb-2">
+            <label for="">Tipo de Topping</label>
+            <select name="type" class="form-select mb-2">
+                <option value="carne">carne</option>
+                <option value="vegetales">vegetales</option>
+                <option value="especias">especias</option>
+                <option value="fruta">fruta</option>
+                <option value="lacteos">lacteos</option>
+                <option value="otro">otro</option>
+            </select>
+            <label for="">Link (Imagen)</label>
+            <input type="text" name="img" class="form-control mb-2">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Logout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header pizzabg" style="border: none;">
+            <h1 class="modal-title fs-5 text-light p-1 " id="exampleModalLabel">Cerrar Sesión</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-dark text-light">
+            seguro que desea cerrar sesión?
+        </div>
+        <div class="modal-footer pizzabg" style="border: none;">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Aun no</button>
+          <button type="button" class="btn btn-danger">Si, Salir</button>
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
     </div>
 <!-- JS BOOTSTRAP -->

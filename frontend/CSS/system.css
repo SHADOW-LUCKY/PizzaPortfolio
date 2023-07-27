@@ -21,6 +21,9 @@
 a{
     text-decoration: none;
 }
+h4:hover{
+    color: #fcc25f;
+}
 .ticket{
     background-color: #bf3100;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23402a2c' fill-opacity='0.4'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -35,8 +38,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 .titleava{
     border-radius:10px;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(209, 176, 160,1);
 }
 .pizzabg{
     background-image: url(../archives/pibg.jpg);
+}
+.bgorder{
+    background-color: #fcc25f;
+}
+#ordenes{
+    height: calc(100vh - 100.86px);
+    overflow-y: auto;
 }
