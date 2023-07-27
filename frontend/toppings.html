@@ -14,30 +14,34 @@
     <div class="container-fluid ">
         <div class="row allpage">
             <!-- sesion y menus -->
+
             <div class="col-2 bgout text-light">
-                    <button class="btn btn-light mt-2" type="button">Log Out </button>                  
+                <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#Logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                  </button>
+                                  
                 <div class="d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-center mt-3 ">
                         <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="..." width="150px" class="rounded-circle">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <h2>hallo</h2>
+                        <h2>admin 1</h2>
                     </div>
                 </div>
                 <div class="menus">
-                    <h2 class="mt-5">Ingredientes </h2>
+                    <h2 class="mt-5 text-center">Ingredientes </h2>
                     <ul>
                         <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h3>toppings</h3></a></div>
+                            <div class="d-flex flex-row mt-2"><a href="#"><h4>toppings</h4></a></div>
                         </li>
                         <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h3>queso base</h3></a></div>
+                            <div class="d-flex flex-row mt-2"><a href="#"><h4>queso base</h4></a></div>
                         </li>
                         <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h3>salsa base</h3></a></div>
+                            <div class="d-flex flex-row mt-2"><a href="#"><h4>salsa base</h4></a></div>
                         </li>
                         <li>
-                            <div class="d-flex flex-row mt-2"><a href="#"><h3>bordes rellenos</h3></a></div>
+                            <div class="d-flex flex-row mt-2"><a href="#"><h4>bordes rellenos</h4></a></div>
                         </li>
                     </ul>
                 </div>
@@ -46,36 +50,28 @@
             <div class="col-8 bg">
                 <div class="d-flex flex-row justify-content-between ">
                     <h1>Toppings</h1> 
-                    <button type="button" class="btn btn-success btn-lg  mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-success btn-lg  mt-2" data-bs-toggle="modal" data-bs-target="#formmodal">
                         <i class="bi bi-plus-square"></i>
                       </button>
                 </div>
                 <div class="row p-2 auto">
                     <div class="col-lg-3 col-md-6 p-2">
-                        <div class="card " >
-                            <div class="card-header d-flex flex-row justify-content-between">
-                                <h5 class="mt-1">pimiento</h5> <a style="font-size: x-large;"><i class="bi bi-x-circle"></i></a> 
+                        <div class="card bgcard" >
+                            <div class="card-header d-flex formradius flex-row justify-content-between">
+                                <h5 class="mt-2">Pimiento</h5><button style="font-size: x-large; background-color: rgba(255,255,255,0); border: none "><i class="bi bi-x-circle text-danger"></i></button> 
                             </div>
                         <img src="https://static.vecteezy.com/system/resources/previews/019/797/312/original/an-8-bit-retro-styled-pixel-art-illustration-of-green-pepper-free-png.png" class="card-img" alt="...">
-                        <div class="p-1">
-                            <div class="row">
-                                <div class="">
-                                    <div class="d-flex flex-row">
-                                        <select class="form-select form-select-sm mx-2" aria-label="Small select example">
-                                            <option value="true">Yes</option>
-                                            <option value="false">No</option>
-                                        </select>
-                                        <button class="btn btn-warning mx-2">Change</button>
-                                    </div>
-                                </div>
-                                 <h5 class="text-center mt-2" style="color: rgb(18, 221, 62);">Available <i class="bi bi-check-circle-fill"></i></h5> 
-                                 <!-- <h5 class="text-center mt-2" style="color: rgb(167, 24, 24);">Not Available <i class="bi bi-x-circle-fill"></i></h5>  -->
+                            <div class="row p-1">
+                                <div class="d-flex flex-row p-2 justify-content-center">
+                                    <form class="d-flex">
+                                        <h5 class="mt-2 p-2 titleava" style="color: rgb(18, 221, 62);">Available<i class="bi bi-check-circle-fill"></i></h5> 
+                                    <!-- <h5 class="text-center mt-2 bg-light" style="color: rgb(167, 24, 24);">Not Available<i class="bi bi-x-circle-fill"></i></h5>  -->
+                                    <button class="btn btn-warning mx-2 my-2">Change</button>
+                                    </form>    
+                                </div>                                    
                             </div>                            
                         </div>
-                        </div>
-                    </div>
-                    
-                    
+                    </div>    
                 </div>
             </div>
             <!-- ordenes light -->
@@ -104,8 +100,8 @@
                 </div>
             </div>
             
-            <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- Modales -->
+              <div class="modal fade" id="formmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -132,6 +128,23 @@
                       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                       <button type="button" class="btn btn-primary">Guardar</button>
                     </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="Logout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header pizzabg" style="border: none;">
+                        <h1 class="modal-title fs-5 text-light p-1 " id="exampleModalLabel">Cerrar Sesión</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                        seguro que desea cerrar sesión?
+                    </div>
+                    <div class="modal-footer pizzabg" style="border: none;">
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Aun no</button>
+                      <button type="button" class="btn btn-danger">Si, Salir</button>
                     </div>
                   </div>
                 </div>

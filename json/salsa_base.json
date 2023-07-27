@@ -1,29 +1,31 @@
 [{
   "name": "Salsa de tomate clásica",
   "description": "La salsa de tomate es una de las opciones más tradicionales y populares para una pizza.",
-  "available": true
-},{
-  "name": "Salsa de tomate con hierbas",
-  "description": "Salsa de tomate con hierbas frescas como albahaca, orégano y tomillo para darle un sabor más aromático y delicioso.",
-  "available": true
-},{
+  "available": true,
+  "imagen":"https://www.guiadecocinafacil.com/wp-content/uploads/2012/11/Salsa-de-tomates-e-hierbas.jpg"
+}{
   "name": "Salsa de tomate con ajo",
   "description": "Una variante de la salsa de tomate clásica, pero con un toque de ajo picado para agregar sabor y aroma.",
-  "available": true
+  "available": true,
+  "imagen":"https://www.crushpixel.com/big-static18/preview4/tomato-sauce-bowl-with-garlic-2885774.jpg"
 },{
   "name": "Salsa de pesto",
   "description": "El pesto es una mezcla de albahaca fresca, piñones, ajo, queso parmesano y aceite de oliva. Es una opción deliciosa y aromática para una pizza.",
-  "available": true
+  "available": true,
+  "imagen":"https://i0.wp.com/commememucho.com/wp-content/uploads/2020/01/Salsa-pesto.jpg"
 },{
   "name": "Salsa de barbacoa",
   "description": "Salsa de barbacoa para una pizza con sabores ahumados y dulces.",
-  "available": true
+  "available": true,
+  "imagen":"https://es.cravingsjournal.com/wp-content/uploads/2019/11/salsa-bbq-5.jpg"
 },{
   "name": "Salsa de buffalo",
   "description": "Salsa de buffalo hecha con salsa de pimienta de cayena y mantequilla, para un sabor picante y un poco picante.",
-  "available": true
+  "available": true,
+  "imagen":"https://hissingcooker.com/wp-content/uploads/2019/12/Buffalo-Sauce-2.jpg"
 },{
   "name": "Salsa de tomate con vino tinto",
   "description": "Variante más sofisticada de la salsa de tomate tradicional, que incluye vino tinto para darle un toque de sabor adicional.",
-  "available": true
+  "available": true,
+  "imagen":""
 }]
