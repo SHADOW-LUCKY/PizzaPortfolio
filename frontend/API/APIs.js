@@ -34,4 +34,18 @@ export const del = async (type, id) => {
         return error;
     }
 }
+export const put = async (type, id, data) => {
+    try {
+        const putdata = await fetch(`${url}${type}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        console.log('it worked');
+    } catch (error) {
+        return error;
+    }
+}
 
