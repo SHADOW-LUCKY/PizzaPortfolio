@@ -14,6 +14,11 @@ const toppingSchema = new mongoose.Schema(
     available: {
         type: Boolean,
         default: true,
+        required: true,
+    },
+    imagen:{
+        type: String,
+        required: true,
     }
 },
 {
@@ -21,4 +26,6 @@ const toppingSchema = new mongoose.Schema(
 }
 )
 
-export default mongoose.model("toppings", toppingSchema);
+const TOP = mongoose.model("toppings", toppingSchema);
+
+export default TOP

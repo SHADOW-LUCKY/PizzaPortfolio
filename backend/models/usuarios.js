@@ -10,15 +10,15 @@ const usuarioSchema = new mongoose.Schema(
     password: {
         type: String,
         required: true,
-    }
-    name: {
+    },
+    name:{
         type: String,
         required: true,
     },
     adress: {
         type: String,
         required: true,
-    }
+    },
     phone: {
         type: String,
         required: true,

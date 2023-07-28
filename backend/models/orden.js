@@ -33,3 +33,5 @@ const ordenSchema = new mongoose.Schema(
 )
 
 export const fillout = mongoose.model("ordenes", ordenSchema);
+
+export default fillout
