@@ -7,16 +7,16 @@ const bordeSchema = new mongoose.Schema(
         required: true,
         unique: true,
     },
-    type: {
-        type: String,
-        required: true,
-    },
     available: {
         type: Boolean,
         default: true,
         required: true,
     },
     imagen:{
+        type: String,
+        required: true,
+    },
+    description:{
         type: String,
         required: true,
     }

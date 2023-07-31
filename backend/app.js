@@ -3,6 +3,8 @@ import cors from "cors";
 import DBconnection from "./config/mongoDB.js";
 import dotenv from "dotenv";
 import toppingRoutes from "./routes/toppings.routes.js";
+import bordesRoutes from "./routes/bordes.routes.js";
+import quesosRoutes from "./routes/quesos.routes.js";
 
 const app = express();
 dotenv.config();
@@ -18,6 +20,5 @@ let corsOptions = {
 app.use(cors(corsOptions));
 
 app.use("/top",toppingRoutes);
-
-
-
+app.use("/bord",bordesRoutes);
+app.use("/que",quesosRoutes);

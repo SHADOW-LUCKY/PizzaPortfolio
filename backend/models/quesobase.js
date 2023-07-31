@@ -7,16 +7,16 @@ const quesoSchema = new mongoose.Schema(
         required: true,
         unique: true,
     },
-    type: {
-        type: String,
-        required: true,
-    },
     available: {
         type: Boolean,
         default: true,
         required: true,
     },
     imagen:{
+        type: String,
+        required: true,
+    },
+    description:{
         type: String,
         required: true,
     }
@@ -27,6 +27,6 @@ const quesoSchema = new mongoose.Schema(
 )
 
 
-const CHEESE = mongoose.model("queso",quesoSchema)
+const CHEESE = mongoose.model("queso_base",quesoSchema)
 
 export default CHEESE

@@ -30,7 +30,7 @@ data.forEach(element => {
         <div class="col-lg-3 col-md-6 p-2">
             <div class="card bgcard" >
                 <div class="card-header d-flex formradius flex-row justify-content-between">
-                    <h5 class="mt-2">${element.name}</h5><button style="font-size: x-large; background-color: rgba(255,255,255,0); border: none "><i class="bi bi-x-circle text-danger"></i></button> 
+                <h5 class="mt-2">${element.name}</h5><button style="font-size: x-large; background-color: rgba(255,255,255,0); border: none "><i class="bi bi-x-circle eliminar text-danger" id="${element._id}"></i></button> 
                 </div>
             <img src="${element.imagen}" class="card-img" alt="..." >
                 <div class="row p-1">
@@ -51,7 +51,6 @@ toppings.innerHTML += plantilla
 const maketopping = async(e)=>{
     e.preventDefault()
     const data = Object.fromEntries(new FormData(e.target))
-    console.log(data);
     await post('top',data)
     window.location.reload()
 }

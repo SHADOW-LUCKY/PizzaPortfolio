@@ -7,10 +7,6 @@ const salsaSchema = new mongoose.Schema(
         required: true,
         unique: true,
     },
-    type: {
-        type: String,
-        required: true,
-    },
     available: {
         type: Boolean,
         default: true,
