@@ -29,3 +29,33 @@
   "available": true,
   "imagen":""
 }]
+/* 
+cronograma 
+
+semana 1 
+
+-desarollo de la base de datos(sujeta a cambios)
+
+-prototipado del frontend (interfaz e ideas clave )
+
+-codificacion de rutas y servidor mongo DB
+
+-actualizacion de codigo(errores y bugs)
+
+semana 2 
+
+-finalizar basico front end 
+
+-terminar funciones principales
+
+-complementar funciones (de acuerdo a requerimientos)
+
+-implementar funciones de seguridad
+
+-decorar frontend 
+
+arreglos y complementaciones (errores y testeo)
+
+
+
+  */
