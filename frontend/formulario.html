@@ -9,33 +9,107 @@
         <title>Document</title>
         <!-- CSS CUSTOM -->
         <link rel="stylesheet" href="CSS/form.css">
+        <link rel="stylesheet" href="CSS/init.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+       />
     </head>
-<body>
-    <nav class="navbar  bg-body-tertiary">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Navbar</span>
-        </div>
-      </nav>
-      <div class="container-fluid beige d-flex flex-column mt-5">
-        <div>
-          <h1 class="text-center " >Creemos tu pizza perfecta para ti</h1>
-          <h2 class="text-center mt-5">Escoje la forma</h2>
-        </div>
-        <div class="d-flex justify-content-center align-items-center bg ">
-          <div class="position-absolute top-50 start-0 translate-middle">
-            <img src="images/pep.png" alt="..."  width="550px"> 
-          </div>
-
-            <div class="alter">
-             
-            </div>
-        </div>
-         
-        
+<body class="bgall">
+  <header>
+    <a href="#" class="logo" style="text-decoration: none;"> <i class="fas fa-utensils"></i>IntoPizza</a>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <nav class="navbar">
+     <a href="#home" style="text-decoration: none;">Inicio</a>
+     <a href="#menu" style="text-decoration: none;">Nuestro menu</a>
+     <a href="#order" style="text-decoration: none;">Ordenes</a>
+    </nav>
+   </header>
+   <section style="margin-top: 100px;">
+    <div class="container-fluid beige d-flex flex-column mt-5" >
+      <div class="">
+        <h1 class="text-center " >Creemos tu pizza perfecta para ti</h1>
+        <h2 class="text-center mt-5">Escoje la forma</h2>
       </div>
+      <div class="d-flex justify-content-center align-items-center bg ">
+        <div class="position-absolute top-50 start-0 translate-middle d-flex justify-content-center back">
+          <img src="images/pep.png" alt="..."  width="550px"> 
+        </div>
+          <div class="alter">
+            <form class="d-flex align-items-center justify-content-center h-100">
+              <div id="carouselExample" class="carousel slide w-100">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                    <div class="row d-flex justify-content-center" id="pg1">
+                      <div class="col-lg-5 col-sm-12 d-flex flex-column justify-content-center ">
+                        <h1 class="text-center">Circular</h1>
+                        <div class="d-flex justify-content-center">
+                          <img src="images/pep.png" alt=".." width="80%">
+                        </div>
+                        <input type="radio" name="forma" value="circular">
+                      </div>
+                      <div class="col-lg-5 col-sm-12 d-flex flex-column justify-content-center ">
+                        <h1 class="text-center">Cuadrada</h1>
+                        <div class="d-flex justify-content-center">
+                          <img src="images/cuad.png"alt=".." width="100%">
+                        </div>
+                        <input type="radio" name="forma" value="cuadrada">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="carousel-item">
+                   
+                    <div class="row d-flex justify-content-center" id="pg2">
+                      <div class="col-lg-5 col-sm-12 d-flex flex-column justify-content-center ">
+                        <h1 class="text-center">Circular1</h1>
+                        <div class="d-flex justify-content-center">
+                          <img src="images/pep.png" alt=".." width="80%">
+                        </div>
+                        <input type="radio" name="forma" value="circular">
+                      </div>
+                      <div class="col-lg-5 col-sm-12 d-flex flex-column justify-content-center ">
+                        <h1 class="text-center">Cuadrada1</h1>
+                      <div class="d-flex justify-content-center">
+                          <img src="images/cuad.png"alt=".." width="100%">
+                      </div>
+                        <input type="radio" name="forma" value="cuadrada">
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+                  <div class="carousel-item">
+                     
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </form>
+          </div>  
+    </div>
+   </section>
 
       <!-- JS BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script type="module" src="API/sendtop.js"></script>
+<script type="module" src="API/sendorder.js"></script>
 </body>
 </html>
+<!-- 
+
+   
+              
+
+
+
+
+          
+ -->

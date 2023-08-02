@@ -1,12 +1,20 @@
 .bg{
-    height: calc(100vh - 240px);
+    height: calc(100vh - 260px);
     width:100% ;
+    
 }
 .alter{
     background-color: bisque;
-    width: 70vw;
+    width: 60vw;
     height: 80%;
 }
-body{
+.bgall{
     width: 100vw;
+    background-image: url("../images/home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.back{
+    z-index: -10;
 }
