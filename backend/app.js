@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import toppingRoutes from "./routes/toppings.routes.js";
 import bordesRoutes from "./routes/bordes.routes.js";
 import quesosRoutes from "./routes/quesos.routes.js";
+import salsasRoutes from "./routes/salsas.routes.js";
 
 const app = express();
 dotenv.config();
@@ -22,3 +23,5 @@ app.use(cors(corsOptions));
 app.use("/top",toppingRoutes);
 app.use("/bord",bordesRoutes);
 app.use("/que",quesosRoutes);
+app.use("/sal",salsasRoutes);
+
