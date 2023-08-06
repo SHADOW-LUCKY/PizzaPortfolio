@@ -1,11 +1,11 @@
-import {get,post,del,put,getid} from './APIs.js'
-const quesos = document.querySelector("#quesos")
+import {get, post,put,del,getid}  from "./APIs.js";
+const salsas = document.querySelector("#salsas")
 const ordenes = document.querySelector("#ordenes")
-const formquesos = document.querySelector("#formquesos")
+const formsalsas = document.querySelector("#formsalsas")
 const logout = document.querySelector("#logout")
 
-const getquesos = async()=>{
-    const data = await get('que')
+const getsal = async()=>{
+    const data = await get('sal')
     data.forEach(element => {
         let plantilla =``
         if(element.available==true){
@@ -45,62 +45,11 @@ const getquesos = async()=>{
                 </div>
             </div>`
         }
-    
-        quesos.innerHTML += plantilla
+        salsas.innerHTML += plantilla
     });
 }
 
-const makequesos = async(e)=>{
-    e.preventDefault()
-    const data = Object.fromEntries(new FormData(e.target))
-    await post('que',data)
-    window.location.reload()
-}
 
-const delpost = async(e)=>{
-    if(e.target.classList.contains("eliminar")) {
-        const idTop = e.target.getAttribute("id");
-        console.log(idTop);
-        const confir = confirm("Desea eliminar este producto?");
-        if (confir) {
-            await del('que', idTop);
-            window.location.reload();
-        }
-    }
-}
-
-const putquesos= async(e)=>{
-    e.preventDefault()
-    let opt
-    const obj = e.target.firstChild.nextSibling
-    if (obj.getAttribute("id")== "true"){
-        opt = false
-    }else{
-        opt = true
-    }
-    const submit = {
-        available: opt
-    }
-    await put('que', obj.getAttribute("name"), submit)
-    window.location.reload()
-}
-
-const auth = async () => {
-    let token = await localStorage.getItem('token')
-    if(!token){
-      alert("Debes iniciar sesión")
-      window.location.href = "index.html"
-    }else{
-      let base64Url = token.split('.')[1];
-      let base64 = base64Url.replace('-', '+').replace('_', '/');
-      let data = await JSON.parse(window.atob(base64));
-      let auth = await getid('user',data.uid)
-      if(auth.role !="admin"){
-        alert("No tienes permiso para realizar esta acción")
-        window.location.href = "init.html"
-      }
-    }   
-}
 const getorders = async()=>{
     const data = await get('orden')
     data.forEach(i => {
@@ -137,17 +86,68 @@ const getorders = async()=>{
     });
     
 }
+const makesal = async(e)=>{
+    e.preventDefault()
+    const data = Object.fromEntries(new FormData(e.target))
+    await post('sal',data)
+    window.location.reload()
+}
+
+const delpost = async(e)=>{
+    if(e.target.classList.contains("eliminar")) {
+        const idSal = e.target.getAttribute("id");
+        console.log(idSal);
+        const confir = confirm("Desea eliminar este producto?");
+        if (confir) {
+            await del('sal', idSal);
+            window.location.reload();
+        }
+    }
+}
+
+const putsalsas = async(e)=>{
+    e.preventDefault()
+    let opt
+    const obj = e.target.firstChild.nextSibling
+    if (obj.getAttribute("id")== "true"){
+        opt = false
+    }else{
+        opt = true
+    }
+    const submit = {
+        available: opt
+    }
+    await put('sal', obj.getAttribute("name"), submit)
+    window.location.reload()
+}
+
+const auth = async () => {
+  let token = await localStorage.getItem('token')
+  if(!token){
+    alert("Debes iniciar sesión")
+    window.location.href = "index.html"
+  }else{
+    let base64Url = token.split('.')[1];
+    let base64 = base64Url.replace('-', '+').replace('_', '/');
+    let data = await JSON.parse(window.atob(base64));
+    let auth = await getid('user',data.uid)
+    if(auth.role !="admin"){
+      alert("No tienes permiso para realizar esta acción")
+      window.location.href = "init.html"
+    }
+  }   
+}
 
 const main = async()=>{
     await auth()
-    await getquesos()
+    await getsal()
     await getorders()
 }
 addEventListener("DOMContentLoaded",main())
-quesos.addEventListener("click",delpost)
-quesos.addEventListener("submit",putquesos)
-formquesos.addEventListener("submit",makequesos)
-logout.addEventListener("click",()=>{
-    localStorage.removeItem("token")
+formsalsas.addEventListener("submit",makesal)
+salsas.addEventListener("click",delpost)
+salsas.addEventListener("submit",putsalsas)
+logout.addEventListener("click",e=>{
+    localStorage.removeItem('token')
     window.location.href = "index.html"
 })

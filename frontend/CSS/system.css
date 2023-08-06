@@ -41,7 +41,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-color: rgba(209, 176, 160,1);
 }
 .pizzabg{
-    background-image: url(../archives/pibg.jpg);
+    background-image: url(../images/pibg.jpg);
 }
 .bgorder{
     background-color: #fcc25f;

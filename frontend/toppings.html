@@ -43,6 +43,9 @@
             <li>
                 <div class="d-flex flex-row mt-2"><a href="bordes.html" class="link-light "><h4>Bordes rellenos</h4></a></div>
             </li>
+            <li>
+              <div class="d-flex flex-row mt-2"><a href="ordenes.html" class="link-light "><h4>Ordenes</h4></a></div>
+          </li>
         </ul>
     </div>
 </div>
@@ -59,38 +62,10 @@
     </div>
 </div>
 <!-- ordenes light -->
-<div class="col-2 bgout text-light p-2">
+<div class="col-2 bgout text-light">
     <h2 class="mt-3">Ordenes actuales</h2>
     <div id="ordenes" class="">
         <!-- <p>parece que no hay ordenes... :(</p> -->
-        <div class="card " style="width: 18rem;">
-          <div class="card-body bgorder" style="border: none;">
-            <h5 class="card-title ">Orden De ${nombre}</h5>
-            <p class="card-text">Orden hecha en: ${CreatedAt}</p>
-          </div>
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Detalles
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Forma:</li>
-                    <li class="list-group-item">Queso base:</li>    
-                    <li class="list-group-item">Salsa base:</li>
-                    <li class="list-group-item">Toppings:</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div> 
-          <div class="card-body bgorder">
-            <a href="#" class="card-link">Ir a las Ordenes</a>
-          </div>
-        </div>
         
     </div>
 </div>
@@ -145,7 +120,7 @@
         </div>
         <div class="modal-footer pizzabg" style="border: none;">
           <button type="button" class="btn btn-light" data-bs-dismiss="modal">Aun no</button>
-          <button type="button" class="btn btn-danger">Si, Salir</button>
+          <button type="button" class="btn btn-danger" id="logout">Si, Salir</button>
         </div>
       </div>
     </div>

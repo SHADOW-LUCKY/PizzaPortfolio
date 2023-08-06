@@ -3,6 +3,10 @@ import mongoose from "mongoose";
 const ordenSchema = new mongoose.Schema(
 {
     person: {
+        type: Object,
+        required: true,
+    },
+    forma: {
         type: String,
         required: true,
     },
@@ -22,9 +26,15 @@ const ordenSchema = new mongoose.Schema(
       type: String,
       required: true  
     },
-    total: {
-        type: Number,
+    address: {
+        type: String,
         required: true
+    },
+    state: {
+        type: String,
+        required: true,
+        enum: ["pending","preparing","ready","delivered"],
+        default:"pending"    
     }
 },
 {

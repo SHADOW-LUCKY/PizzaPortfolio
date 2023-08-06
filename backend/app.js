@@ -6,6 +6,9 @@ import toppingRoutes from "./routes/toppings.routes.js";
 import bordesRoutes from "./routes/bordes.routes.js";
 import quesosRoutes from "./routes/quesos.routes.js";
 import salsasRoutes from "./routes/salsas.routes.js";
+import usuariosRoutes from "./routes/usuario.routes.js";
+import loginroutes from "./routes/auth.routes.js";
+import ordenRoutes from "./routes/orden.routes.js";
 
 const app = express();
 dotenv.config();
@@ -24,4 +27,8 @@ app.use("/top",toppingRoutes);
 app.use("/bord",bordesRoutes);
 app.use("/que",quesosRoutes);
 app.use("/sal",salsasRoutes);
+app.use("/user",usuariosRoutes);
+app.use("/login",loginroutes);
+app.use("/orden",ordenRoutes);
+
 

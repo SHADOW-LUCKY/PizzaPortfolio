@@ -1,4 +1,4 @@
-import {get,post,del,put} from './APIs.js'
+import {get,post,del,put, getid} from './APIs.js'
 const quesos = document.querySelector('#quesos')
 const salsas = document.querySelector('#salsas')
 const toppings = document.querySelector('#toppings')
@@ -19,7 +19,7 @@ const getquesos = async () => {
                       <img src="${element.imagen}"  width="100px" alt="...">
                     </div>
                     <div class="card-body d-flex justify-content-center">
-                      <h4>${element.name}</h4><input type="radio" style="margin-left:5px ;" name="queso" value="${element.name}">
+                      <h4>${element.name}</h4><input type="radio" style="margin-left:5px ;" name="cheese" value="${element.name}">
                     </div>
                   </div>
                 </div>
@@ -46,7 +46,7 @@ const getsalsas = async () => {
                       <img src="${element.imagen}"  width="100px" alt="...">
                     </div>
                     <div class="card-body d-flex justify-content-center">
-                      <h4>${element.name}</h4><input type="radio" style="margin-left:5px ;" name="salsa" value="${element.name}">
+                      <h4>${element.name}</h4><input type="radio" style="margin-left:5px ;" name="sauce" value="${element.name}">
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const gettoppings = async () => {
                       <img src="${element.imagen}"  width="100px" alt="...">
                     </div>
                     <div class="card-body d-flex justify-content-center" id="topp">
-                      <h4>${element.name}</h4><input type="checkbox" style="margin-left:5px ;"  name="topping" value="${element.name}">
+                      <h4>${element.name}</h4><input type="checkbox" style="margin-left:5px ;"  name="toppings" value="${element.name}">
                     </div>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const getbordes = async () => {
                       <img src="${element.imagen}"  width="100px" alt="...">
                     </div>
                     <div class="card-body d-flex justify-content-center">
-                      <h4>${element.name}</h4><input type="radio" style="margin-left:5px ;" name="borde" value="${element.name}">
+                      <h4>${element.name}</h4><input type="radio" style="margin-left:5px ;" name="borders" value="${element.name}">
                     </div>
                   </div>
                 </div>
@@ -111,9 +111,7 @@ const getbordes = async () => {
             bordes.innerHTML += plantilla
             
         })
-        bordes.innerHTML += `<div class="col-12 d-flex justify-content-center">
-            <button type="submit" class="btn ">Enviar</button>
-          </div>`
+       
     } catch (error) {
         console.log(error)
     }
@@ -147,17 +145,59 @@ const check = () => {
 const postorden = async (e) => {
     e.preventDefault()
     const data = Object.fromEntries(new FormData(e.target))
-    data.topping = ordertop
-    console.log(data);
+
+    let name= data.person
+
+    data.person = {
+        name,
+        uid: await token()
+    }
+
+    data.toppings = ordertop
+    if(!data.address || !data.borders || !data.person || !data.sauce || !data.toppings || !data.cheese || !data.forma){
+        alert("Todos los campos son obligatorios")
+    }else{
+      alert("Orden creada")
+      await post('orden',data)
+      window.location.reload()
+    }
+    
+}
+
+const token = async () => {
+  let token = await localStorage.getItem('token')
+  if(!token){
+    alert("Debes iniciar sesión")
+    window.location.href = "login.html"
+  }else{
+    let base64Url = token.split('.')[1];
+    let base64 = base64Url.replace('-', '+').replace('_', '/');
+    let data = await JSON.parse(window.atob(base64));
+    return data.uid
+  }
+}
+
+const auth = async () => {
+  let token = await localStorage.getItem('token')
+  if(!token){
+    alert("Debes iniciar sesión")
+    window.location.href = "index.html"
+  }else{
+    let base64Url = token.split('.')[1];
+    let base64 = base64Url.replace('-', '+').replace('_', '/');
+    let data = await JSON.parse(window.atob(base64));
+    let auth = await getid('user',data.uid)
+    return auth
+  }   
 }
 
 async function main() {
+  await auth()
   await getsalsas()
   await getquesos();
   await gettoppings() 
   await getbordes()
   await check()
-
 };
 formulario.addEventListener('submit', postorden)
 addEventListener('DOMContentLoaded', main)

@@ -30,7 +30,7 @@ const updateOrden = async (req, res) => {
 const deleteOrden = async (req, res) => {
     try {
         const orden = await fillout.findByIdAndDelete(req.params.id);
-        res.json(orden);
+        res.json({ message: "Orden eliminada" });
     } catch (error) {
         console.log(error);
     }

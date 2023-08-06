@@ -11,3 +11,5 @@ router.post("/",[
 router.put("/:id", updateOrden);
 router.delete("/:id", deleteOrden);
 
+export default router
+

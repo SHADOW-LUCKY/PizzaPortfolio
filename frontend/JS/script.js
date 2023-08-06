@@ -1,5 +1,6 @@
 let menu = document.querySelector('#menu-bar')
 let navbar = document.querySelector('.navbar')
+const logout = document.querySelector('#logout')
 
 menu.onclick = () => {
  menu.classList.toggle('fa-times')
@@ -21,3 +22,13 @@ function fadeOut() {
  setInterval(loader, 3000)
 }
 window.onload = fadeOut()
+
+const out = async () => {
+    confirm("Desea cerrar sesion?")
+    if (confirm){
+        localStorage.removeItem('token')
+        window.location.href = "index.html"
+    }
+}
+
+logout.addEventListener('click', out)

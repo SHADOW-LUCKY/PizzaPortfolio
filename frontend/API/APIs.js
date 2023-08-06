@@ -10,6 +10,16 @@ export const get = async (type) => {
         return error;
     }
 } 
+
+export const getid = async (type, id) => {
+    try {
+        const getdata = await fetch(`${url}${type}/${id}`)
+        const data = await getdata.json()
+        return data
+    } catch (error) {
+        return error;
+    }
+}
 export const post = async (type, data) => {
     try {
         const postdata = await fetch(`${url}${type}`, {
@@ -19,7 +29,8 @@ export const post = async (type, data) => {
             },
             body: JSON.stringify(data)
         })
-        console.log('it worked');
+        let res = await postdata.json()
+        return res
     } catch (error) {
         return error;
     }
@@ -48,4 +59,5 @@ export const put = async (type, id, data) => {
         return error;
     }
 }
+
 

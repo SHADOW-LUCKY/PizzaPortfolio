@@ -1,6 +1,8 @@
-import {get,post,del,put} from './APIs.js'
+import {get,post,del,put,getid} from './APIs.js'
 const toppings = document.querySelector('#toppings')
+const ordenes = document.querySelector('#ordenes')
 const form = document.querySelector('#formtop')
+const logout = document.querySelector('#logout')
 
 
 const getall = async()=>{
@@ -81,9 +83,71 @@ const puttopping = async(e)=>{
     await put('top', obj.getAttribute("name"), submit)
     window.location.reload()
 }
+const getorders = async()=>{
+    const data = await get('orden')
+    data.forEach(i => {
+        let plantilla =`
+        <div class="card " >
+          <div class="card-body bgorder" style="border: none;">
+            <h5 class="card-title ">Orden De ${i.person.name}</h5>
+          </div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${i._id}" aria-expanded="false" aria-controls="${i._id}">
+                  Detalles
+                </button>
+              </h2>
+              <div id="${i._id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Forma:${i.forma}</li>
+                    <li class="list-group-item">Queso base:${i.cheese}</li>
+                    <li class="list-group-item">Toppings:${i.toppings.join(', ')}</li>
+                    <li class="list-group-item">Salsa base:${i.sauce}</li>
+                    <li class="list-group-item">Bordes:${i.borders}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="card-body bgorder">
+            <a href="ordenes.html" class="card-link">Ir a las Ordenes</a>
+          </div>
+        </div>`
+        ordenes.innerHTML += plantilla
+    });
+    
+}
 
+const auth = async () => {
+  let token = await localStorage.getItem('token')
+  if(!token){
+    alert("Debes iniciar sesión")
+    window.location.href = "index.html"
+  }else{
+    let base64Url = token.split('.')[1];
+    let base64 = base64Url.replace('-', '+').replace('_', '/');
+    let data = await JSON.parse(window.atob(base64));
+    let auth = await getid('user',data.uid)
+    if(auth.role !="admin"){
+      alert("No tienes permiso para realizar esta acción")
+      window.location.href = "init.html"
+    }
+  }   
+}
 
-addEventListener('DOMContentLoaded',getall())
+const main = async()=>{
+    await auth()
+    await getall()
+    await getorders()
+}
+
+addEventListener('DOMContentLoaded',main())
 form.addEventListener('submit',maketopping)
 toppings.addEventListener('click',delpost)
 toppings.addEventListener('submit',puttopping)
+logout.addEventListener('click',()=>{
+    localStorage.removeItem('token')
+    window.location.href = "index.html"
+})

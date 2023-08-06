@@ -1,12 +1,21 @@
 .bg{
-    height: calc(100vh - 260px);
+    height: calc(100vh - 210px);
     width:100% ;
     
 }
 .alter{
     background-color: bisque;
     width: 60vw;
-    height: 80%;
+    height: 90%;
+}
+.alterorder{
+    background-color: bisque;
+    width: 60vw;
+    height: 90%;
+    overflow-y: auto;
+}
+.bgorder{
+    background-color: #fcc25f; 
 }
 .bgall{
     width: 100vw;
